@@ -11,11 +11,11 @@ spec:
   containers:
   - name: kube-addon-manager
     # When updating version also bump it in cluster/images/hyperkube/static-pods/addon-manager.json
-    image: gcr.io/google-containers/kube-addon-manager:v5.2
+    image: siriuszg/kube-addon-manager:v5.2
     resources:
       requests:
-        cpu: 5m
-        memory: 50Mi
+        cpu: 50m
+        memory: 100Mi
     volumeMounts:
     - mountPath: /etc/kubernetes/
       name: addons
