@@ -38,7 +38,7 @@ spec:
         scheduler.alpha.kubernetes.io/tolerations: '[{"key":"CriticalAddonsOnly", "operator":"Exists"}]'
     spec:
       containers:
-        - image: gcr.io/google_containers/heapster:v1.2.0
+        - image: siriuszg/heapster:v1.2.0
           name: heapster
           livenessProbe:
             httpGet:
@@ -58,7 +58,7 @@ spec:
           command:
             - /heapster
             - --source=kubernetes.summary_api:''
-        - image: gcr.io/google_containers/addon-resizer:1.6
+        - image: siriuszg/addon-resizer:1.6
           name: heapster-nanny
           resources:
             limits:
